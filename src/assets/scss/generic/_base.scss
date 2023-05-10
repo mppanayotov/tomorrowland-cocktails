@@ -1,0 +1,155 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body {
+	min-width: 320px;
+	background: #050C13;
+	font-family: $ff-europa;
+	font-weight: $font-weight-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: #fff;
+	font-display: swap;
+}
+
+a,
+button {
+	color: inherit;
+	text-decoration: underline;
+	transition: $tsi;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&[href^="tel"] {
+		text-decoration: none;
+	}
+}
+
+svg {
+	max-width: 100%; 
+	max-height: 100%; 
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+	margin-bottom: calc(#{$line-height-base}em / 2);
+}
+
+.h1,
+h1 {
+	font-size: 22px; 
+	font-weight: 400; 
+	font-family: $ff-saveur; 
+	letter-spacing: 0.2em;
+	text-transform: uppercase; 
+	color: #FFCC5D; 
+
+	@include breakpoint-down(tablet) {
+		font-size: 18px; 
+	}
+}
+
+.h2,
+h2 {
+	font-size: 22px; 
+	font-weight: 400; 
+	font-family: $ff-saveur; 
+	letter-spacing: 0.2em;
+	text-transform: uppercase; 
+	color: #FFCC5D; 
+
+	@include breakpoint-down(tablet) {
+		font-size: 22px; 
+	}
+
+	@include breakpoint-down(mobile-small) {
+		font-size: 18px; 
+	}
+}
+
+.h3,
+h3 {
+	font-size: 15px; 
+	font-weight: 600; 
+	letter-spacing: .2em;
+	font-family: $ff-saveur; 
+	text-transform: uppercase; 
+
+	@include breakpoint-down(mobile-small) {
+		font-size: 12px; 
+	}
+}
+
+.h4,
+h4 {
+	font-size: 13px; 
+	font-weight: 600; 
+	letter-spacing: .2em;
+	font-family: $ff-saveur; 
+	text-transform: uppercase; 
+}
+
+.h5,
+h5 {
+	font-size: 11px; 
+	font-weight: 600; 
+	letter-spacing: .2em;
+	font-family: $ff-saveur; 
+	text-transform: uppercase; 
+}
+
+.h6,
+h6 {}
+
+p {
+	letter-spacing: 0.04em;
+	line-height: 1.35; 
+
+	@include breakpoint-down(tablet) {
+		line-height: 1.45;
+	}
+}
+
+p,
+ul,
+ol,
+dl,
+hr,
+table,
+blockquote {
+	margin-bottom: #{$line-height-base}em;
+}
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+	margin-bottom: 0;
+}

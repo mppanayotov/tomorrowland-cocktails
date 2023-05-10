@@ -1,0 +1,238 @@
+/* ------------------------------------------------------------ *\
+	section
+\* ------------------------------------------------------------ */
+
+.section {
+	position: relative; 
+	margin-left: auto; 
+	margin-right: auto; 
+	max-width: calc(100vw - 100px); 
+	padding-bottom: 45px; 
+	z-index: 2; 
+
+	@include breakpoint-down(tablet) {
+		min-width: 320px; 
+		max-width: 100vw; 
+		padding-bottom: 0; 
+	}
+
+	.section__shell {
+		position: relative; 
+
+		@include breakpoint-down(tablet) {
+			padding: 0; 
+		}
+	}
+
+	.section__head {
+		position: relative; 
+		left: 50%; 
+		transform: translateX(-50%); 
+		margin-left: -$shell-gutter; 
+		margin-right: -$shell-gutter; 
+		width: 100%; 
+		max-width: 966px; 
+
+		@include breakpoint-down(tablet) {
+			left: 0; 
+			margin: 0; 
+			transform: none;
+			max-width: none; 
+		}
+	}
+
+	.section__badge {
+		position: absolute; 
+		top: -85px; 
+		left: 0; 
+		padding: 82px 10px 10px;
+		width: 190px; 
+		height: 190px; 
+		text-align: center; 
+		background-image: url(../images/badge.png); 
+		background-size: 98.5% 100%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		white-space: nowrap;
+		z-index: 1; 
+
+		@include breakpoint-down(small-desktop) {
+			left: 0; 
+		}
+
+		@include breakpoint-down(tablet) {
+			position: relative; 
+			top: 0; 
+			margin-left: auto; 
+			margin-right: auto; 
+			padding: 60px 10px 10px;
+			width: 142px; 
+			height: 142px; 
+		}
+	}
+
+	.section__badge h2 {
+		margin-bottom: 0px; 
+
+		@include breakpoint-down(tablet) {
+			font-size: 16px; 
+		}
+	}
+
+	.section__badge h4 {
+		line-height: 1.3; 
+		font-weight: 400; 
+
+		@include breakpoint-down(tablet) {
+			font-size: 10px; 
+		}
+	}
+
+	.section__sidebar {
+		position: absolute;
+		top: 85px; 
+		right: calc(50% + 160px); 
+		width: 280px; 
+		height: calc(100% - 145px);
+		z-index: 2; 
+
+		@include breakpoint-down(tablet) {
+			top: 115px; 
+			left: calc(100% - 104px);
+			right: 0; 
+			width: auto;
+			height: calc(100% - 175px);
+		}
+	}
+
+	.section__tile {
+		padding-top: 85px; 
+
+		@include breakpoint-down(tablet) {
+			padding-top: 70px; 
+		}
+	}
+
+	.section__main {
+		margin-left: -107px; 
+		padding-left: 50%; 
+
+		@include breakpoint-down(tablet) {
+			margin: 0; 
+			padding: 0; 
+		}
+	}
+
+	.section__article--margin {
+		margin-top: 12px; 
+
+		@include breakpoint-down(tablet) {
+			margin-top: 0; 
+		}
+	}
+}
+
+/*  section--offset  */
+.section--offset {
+	.section__main {
+		margin-left: -145px; 
+
+		@include breakpoint-down(tablet) {
+			margin: 0; 
+		}
+	}
+
+	.section__sidebar {
+		right: calc(50% + 190px); 
+
+		@include breakpoint-down(tablet) {
+			right: 0; 
+		}
+	}
+}
+
+/*  section--reverse  */
+.section--reverse {
+	.section__main {
+		margin-left: 0; 
+		padding-left: 0; 
+		padding-right: 280px;  
+
+		@include breakpoint-down(small-desktop) {
+			padding-left: 45px; 
+		}
+
+		@include breakpoint-down(tablet) {
+			padding: 0; 
+		}
+	}
+
+	.section__sidebar {
+		top: 30px; 
+		right: $shell-gutter; 
+		height: calc(100% - 90px);
+
+		@include breakpoint-down(small-desktop) {
+			right: -35px; 
+		}
+
+		@include breakpoint-down(tablet) {
+			top: 115px; 
+			right: 0; 
+			height: calc(100% - 175px);
+		}
+	}
+}
+
+/*  section--padding  */
+.section--padding {
+	padding-top: 158px; 
+
+	@include breakpoint-down(tablet) {
+		padding-top: 0; 
+	}
+}
+
+/*  section--badge  */
+.section--badge {
+	.section__sidebar {
+		top: 100px; 
+		height: calc(100% - 160px);
+
+		@include breakpoint-down(tablet) {
+			top: 257px; 
+			height: calc(100% - 317px);
+		}
+	}
+}
+
+/*  section--badge-alt  */
+.section--badge-alt {
+	padding-bottom: 38px; 
+
+	 @include breakpoint-down(tablet) {
+	 	padding-bottom: 0; 
+	 }
+
+	.section__badge {
+		top: -94px; 
+
+		@include breakpoint-down(tablet) {
+			top: 0; 
+		}
+	}
+
+	.section__sidebar {
+		top: 60px; 
+		height: calc(100% - 172px);
+
+		@include breakpoint-down(tablet) {
+			top: 257px; 
+			height: calc(100% - 317px);
+		}
+	}
+}
+
+.section--badge-alt:last-of-type {
+	padding-bottom: 0; 
+}

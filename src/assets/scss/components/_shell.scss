@@ -1,0 +1,12 @@
+/* ------------------------------------------------------------ *\
+  Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	margin-left: auto;
+	margin-right: auto; 
+	padding-left: $shell-gutter;
+	padding-right: $shell-gutter;
+	width: 100%;
+	max-width: calc( #{$shell-max-width} + #{$shell-gutter} * 2 );
+}

@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Main
+\* ------------------------------------------------------------ */
+
+.main {
+	position: relative; 
+	z-index: 10; 
+
+	.main__inner {
+		@include breakpoint-down(tablet) {
+			position: relative; 
+			padding-top: 66px; 
+		}
+	}
+}

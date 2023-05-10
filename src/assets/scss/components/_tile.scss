@@ -1,0 +1,141 @@
+/* ------------------------------------------------------------ *\
+	tile
+\* ------------------------------------------------------------ */
+
+.tile {
+	position: relative; 
+	width: 100%; 
+	height: 362px; 
+	border: 1px solid #d1962e;
+	padding: 19px 16px 20px;
+	display: flex; 
+	flex-direction: column;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5), 0 0 6px rgba(209,150,46,0.5) inset;
+	background: linear-gradient(0deg, rgba(0,7,18,1) 30%, rgba(12,20,39,0.5) 100%);
+
+	@include breakpoint-down(tablet) {
+		width: calc(100% + 7px); 
+		margin-right: -7px; 
+		padding: 9px 6px 13px;
+		height: 268px; 
+	}
+
+	&:before {
+		content: '';
+		position: absolute; 
+		top: 5px; 
+		left: 5px; 
+		right: 5px; 
+		bottom: 5px; 
+		border: 1px solid rgba(209,150,46,0.5);
+		pointer-events: none;
+
+		@include breakpoint-down(tablet) {
+			top: 4px; 
+			left: 4px; 
+			right: 4px; 
+			bottom: 4px; 
+		}
+	}
+
+	h4 {
+		position: relative; 
+		margin-top: auto; 
+		color: #FFCC5D; 
+		text-align: center; 
+		flex: 0 1 auto;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 1px; 
+			padding-left: 10px; 
+			line-height: 1.4; 
+			font-size: 11px; 
+		}
+	} 
+
+	h4 + h5 {
+		position: relative; 
+		color: #FFF; 
+		text-align: center; 
+
+		@include breakpoint-down(tablet) {
+			margin-left: 0; 
+			padding-left: 10px; 
+			font-size: 10px; 
+		}
+	}
+
+	h5 {
+		color: #FFCC5D; 
+		flex: 0 1 auto;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 5px; 
+			line-height: 1.4; 
+			font-size: 9px; 
+		}
+	}
+
+	figure {
+		position: absolute; 
+		top: -85px;
+		left: 50%; 
+		bottom: 75px; 
+		transform: translateX(-50%); 
+		width: calc(100% - 14px);
+		overflow: hidden; 
+
+		@include breakpoint-down(tablet) {
+			top: -5px; 
+			bottom: auto; 
+			margin-left: 10px; 
+			width: auto; 
+			width: calc(100% - 12px);
+			height: calc(100% - 75px);
+		}
+	}
+
+	img {
+		position: absolute; 
+		bottom: 0; 
+		left: 50%; 
+		transform: translateX(-50%); 
+
+		@include breakpoint-down(tablet) {
+			width: auto; 
+			height: 100%; 
+		}
+	}
+}
+
+/*  tile--sm  */
+.tile--sm {
+	@include breakpoint-down(tablet) {
+		height: 238px; 
+	}
+
+	figure {
+		@include breakpoint-down(tablet) {
+			top: -14px; 
+			height: calc(100% - 83px);
+		}
+	}
+
+	.tile__offset {
+		@include breakpoint-down(tablet) {
+			top: -10px; 
+		}
+	}
+
+	.tile__offset img {
+		margin-bottom: -30px; 
+		margin-left: 7px; 
+		max-width: none; 
+
+		@include breakpoint-down(tablet) {
+			margin-left: -4px; 
+			margin-bottom: -14px; 
+			height: calc(100% + 14px);
+		}
+	}
+}

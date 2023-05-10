@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden; 
+
+	&:before {
+		content: '';
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		background-image: url(../images/coctails.jpg); 
+		background-size: 100% auto;
+		background-position: 50% 0%;
+		background-repeat: no-repeat repeat;
+		pointer-events: none;
+		opacity: .9; 
+	}
+
+	&:after {
+		content: '';
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		background-color: rgba(0,7,23,0.7);
+		mix-blend-mode: soft-light;
+	}
+
+	.js-sticky {
+		will-change: height;
+
+		@include breakpoint-down(tablet) {
+			width: 100%; 
+		}
+	}
+
+	.js-sticky-inner {
+		will-change: position, transform, left, top, width;
+	}
+
+	.scrollspy-container {
+		position: relative; 
+	}
+
+	.scrollspy-target {
+		position: absolute;
+		top: -94px;
+		left: 0;
+		bottom: 94px;
+		right: 0;
+		pointer-events: none;
+
+		@include breakpoint-down(tablet) {
+			top: -70px; 
+		}
+	}
+}

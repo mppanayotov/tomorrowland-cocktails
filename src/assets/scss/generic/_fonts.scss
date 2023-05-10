@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+		Fonts
+\* ------------------------------------------------------------ */
+
+@font-face {
+	font-family: 'Saveur Sans';
+	src: url('../fonts/SaveurSans-Regular.eot');
+	src: url('../fonts/SaveurSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SaveurSans-Regular.woff2') format('woff2'),
+		url('../fonts/SaveurSans-Regular.woff') format('woff'),
+		url('../fonts/SaveurSans-Regular.ttf') format('truetype'),
+		url('../fonts/SaveurSans-Regular.svg#SaveurSans-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Saveur Sans';
+	src: url('../fonts/SaveurSans-Semi-bold.eot');
+	src: url('../fonts/SaveurSans-Semi-bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SaveurSans-Semi-bold.woff2') format('woff2'),
+		url('../fonts/SaveurSans-Semi-bold.woff') format('woff'),
+		url('../fonts/SaveurSans-Semi-bold.ttf') format('truetype'),
+		url('../fonts/SaveurSans-Semi-bold.svg#SaveurSans-Semi-bold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

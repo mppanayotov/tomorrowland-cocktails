@@ -1,0 +1,137 @@
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+	position: relative; 
+	padding-top: 26px; 
+	padding-bottom: 38px; 
+	font-size: 13px; 
+	text-transform: uppercase; 
+	text-align: center; 
+	letter-spacing: 0.135em;
+	white-space: nowrap;
+	font-family: $ff-saveur; 
+	z-index: 10; 
+
+	@include breakpoint-down(tablet) {
+		padding-top: 28px; 
+	}
+
+	@include breakpoint-down(mobile-small) {
+		font-size: 11px; 
+	}
+
+	p {
+		margin-bottom: 0; 
+		padding-top: 36px; 
+		padding-bottom: 25px; 
+		flex: 0 0 auto;
+		line-height: 1; 
+	}
+
+	a {
+		flex: 0 0 auto;
+	}
+
+	ul {
+		margin-bottom: 30px; 
+		flex: 0 0 auto;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 58px; 
+		}
+	}
+
+	.footer__shell {
+		max-width: calc( 498px + #{$shell-gutter} * 2 );
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__logo {
+		margin-bottom: 41px; 
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 29px; 
+			max-width: 159px; 
+		}
+	}
+
+	.footer__btn {
+		@include breakpoint-down(tablet) {
+			margin: 5px; 
+			padding: 6px 14px 7px; 
+			font-size: 10px; 
+		}
+	}
+
+	.footer__btn:after {
+		@include breakpoint-down(tablet) {
+			top: -5px; 
+			left: -5px; 
+			right: -5px; 
+			bottom: -5px; 
+		}
+	}
+
+	.footer__copyright {
+		margin-bottom: 0; 
+		padding-top: 55px; 
+		padding-bottom: 0; 
+		color: #FFCC5D; 
+		font-weight: 700; 
+		font-size: 11px; 
+		text-shadow: 0 0 4px rgba(155,222,236,.42), 0 1px 10px rgba(51,177,251,.25);
+		letter-spacing: 0.115em;
+		font-family: $ff-europa; 
+
+		@include breakpoint-down(tablet) {
+			padding-top: 41px; 
+		}
+	}
+
+	.footer__copyright a {
+		position: relative; 
+		display: inline-block; 
+		text-decoration: none; 
+
+		@include breakpoint-down(tablet) {
+			margin-top: 6px; 
+		}
+	}
+
+	.footer__copyright a:before {
+		content: '';
+		position: absolute; 
+		top: 100%; 
+		left: 0; 
+		margin-top: 2px; 
+		width: 100%; 
+		height: 1px; 
+		background-color: #FFCC5D; 
+		box-shadow: 0 2px 4px #CF8C25;
+		opacity: 0.2; 
+		pointer-events: none;
+		transition: $tsi;
+	}
+
+	.footer__copyright a:hover:before {
+		opacity: 0; 
+	}
+
+	.footer__copyright span {
+		@include breakpoint-down(tablet) {
+			display: none; 
+		}
+	}
+
+	.footer__copyright br {
+		display: none; 
+
+		@include breakpoint-down(tablet) {
+			display: block; 
+		}
+	}
+}

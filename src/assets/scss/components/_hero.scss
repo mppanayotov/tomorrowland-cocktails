@@ -1,0 +1,138 @@
+/* ------------------------------------------------------------ *\
+	hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	position: relative; 
+	padding-top: 59px; 
+	padding-bottom: 46px; 
+	text-align: center; 
+
+	@include breakpoint-down(tablet) {
+		padding-top: 97px; 
+		padding-bottom: 10px; 
+	}
+
+	h1,
+	h4,
+	p {
+		@include breakpoint-down(tablet) {
+			padding: 0 20px;
+		}
+	}
+
+	h1 {
+		letter-spacing: 0.21em;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 0; 
+		}
+	}
+
+	h4 {
+		padding-bottom: 2px; 
+		font-weight: 400; 
+		letter-spacing: .21em;
+
+		@include breakpoint-down(tablet) {
+			padding-bottom: 8px; 
+			line-height: 1.4; 
+		}
+	}
+
+	p {
+		margin-left: auto;
+		margin-right: auto; 
+		width: 100%; 
+		max-width: 580px; 
+		letter-spacing: 0.045em;
+		font-size: 15px; 
+
+		@include breakpoint-down(tablet) {
+			font-size: 13px; 
+		}
+	}
+
+	p br {
+		@include breakpoint-down(tablet) {
+			display: none; 
+		}
+	}
+
+	.hero__shell {
+		max-width: calc( 582px + #{$shell-gutter} * 2 );
+	}
+
+	.hero__logo {
+		display: inline-block; 
+		margin-bottom: 46px; 
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 25px; 
+			max-width: 159px; 
+		}
+	}
+
+	.hero__head {
+		position: relative; 
+		padding: 38px 42px 24px;
+
+		@include breakpoint-down(tablet) {
+			margin: 0 12px; 
+			padding: 30px 0 0px; 
+		}
+	}
+
+	.hero__body {
+		margin-top: 33px; 
+
+		@include breakpoint-down(tablet) {
+			margin-top: 20px; 
+		}
+	}
+
+	.hero__countdown {
+		margin-left: auto;
+		margin-right: auto; 
+		width: 182px; 
+		height: 72px; 
+		padding: 23px 12px 34px; 
+		line-height: 1; 
+		background-image: url(../images/callout.png); 
+		background-size: 98% 95%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: $ff-saveur; 
+		font-size: 15px; 
+		letter-spacing: .22em;
+		white-space: nowrap;
+		transform-style: preserve-3d;
+
+		@include breakpoint-down(tablet) {
+			margin-bottom: 6px; 
+			padding: 18px 12px 28px; 
+			width: 146px; 
+			height: 58px; 
+			font-size: 12px; 
+		}
+	}
+
+	.hero__countdown div {
+		transform: scale(.8); 
+		opacity: 0; 
+		visibility: hidden; 
+		pointer-events: none;
+		transition: transform 1.3s ease-out, opacity 1.3s ease-out, visibility 1.3s ease-out;
+	}
+
+	.hero__countdown .is-initialized {
+		transform: scale(1); 
+		opacity: 1; 
+		visibility: visible; 
+		pointer-events: auto;
+	}
+}
